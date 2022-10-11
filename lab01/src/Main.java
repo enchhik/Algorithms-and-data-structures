@@ -9,42 +9,47 @@ public class Main {
         List<Integer> arrayList = new ArrayList<>();
         List<Integer> linkedList = new LinkedList<>();
 
-        fill(arrayList, 100000, "arrayList");
-        fill(linkedList, 100000, "linkedList");
+        int countElem = 100000;
+        int insertElem = 1000;
+
+        String arrList = "arrayList";
+        String linkList = "linkedList";
+
+        fill(arrayList, countElem, arrList);
+        fill(linkedList, countElem, linkList);
 
         System.out.println();
 
-        randomAccess(arrayList, "arrayList");
-        randomAccess(linkedList, "linkedList");
+        randomAccess(arrayList, arrList);
+        randomAccess(linkedList, linkList);
 
         System.out.println();
 
-        sequantialAccess(arrayList, "arrayList");
-        sequantialAccess(linkedList, "linkedList");
+        sequentialAccess(arrayList, arrList);
+        sequentialAccess(linkedList, linkList);
 
         System.out.println();
 
-        putIntoBegin(arrayList, 1000, "arrayList");
-        putIntoBegin(linkedList, 1000, "linkedList");
+        putIntoBegin(arrayList, insertElem, arrList);
+        putIntoBegin(linkedList, insertElem, linkList);
 
         System.out.println();
 
-        putIntoEnd(arrayList, 1000, "arrayList");
-        putIntoEnd(linkedList, 1000, "linkedList");
+        putIntoEnd(arrayList, insertElem, arrList);
+        putIntoEnd(linkedList, insertElem, linkList);
 
         System.out.println();
 
-        putIntoMiddle(arrayList, 1000, "arrayList");
-        putIntoMiddle(linkedList, 1000, "linkedList");
+        putIntoMiddle(arrayList, insertElem, arrList);
+        putIntoMiddle(linkedList, insertElem, linkList);
 
     }
 
     private static void fill(List<Integer> list, int count, String listType) {
         long time = System.currentTimeMillis();
 
-        for (int i = 0; i < count; i++) {
-        list.add(i, rand.nextInt(count));
-        }
+        for (int i = 0; i < count; i++)
+            list.add(i, rand.nextInt(count));
 
         System.out.printf("Fill %s: %s%n", listType, System.currentTimeMillis() - time);
     }
@@ -60,13 +65,14 @@ public class Main {
         System.out.printf("Random Access in %s: %s%n", listType, System.currentTimeMillis() - time);
     }
 
-    private static void sequantialAccess(List<Integer> list, String listType) {
+    private static void sequentialAccess(List<Integer> list, String listType) {
         long time = System.currentTimeMillis();
 
-        for (Integer i : list)
-            list.get(i);
+        for (Integer i : list) {
+            Integer s = i;
+        }
 
-        System.out.printf("Sequental Access %s: %s%n", listType, System.currentTimeMillis() - time);
+        System.out.printf("Sequential Access %s: %s%n", listType, System.currentTimeMillis() - time);
     }
 
     private static void putIntoBegin(List<Integer> list, int count, String listType) {
