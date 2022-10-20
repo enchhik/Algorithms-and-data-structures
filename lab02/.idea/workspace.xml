@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b0d4b92f-0a3f-4d09-81aa-e66ff4cd046f" name="Changes" comment="created:&#10;- static factory method;&#10;- Bubble sort;&#10;- Shell sort.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab02/SortedLists/MergeSorter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab02/SortedLists/MergeSorter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SortedLists/MergeSorter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SortedLists/MergeSorter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SortedLists/QuickSorter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SortedLists/QuickSorter.java" afterDir="false" />
-    </list>
+    <list default="true" id="b0d4b92f-0a3f-4d09-81aa-e66ff4cd046f" name="Changes" comment="created:&#10;- static factory method;&#10;- Bubble sort;&#10;- Shell sort." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,7 +57,7 @@
       <workItem from="1666087529728" duration="24610000" />
       <workItem from="1666163076349" duration="2645000" />
       <workItem from="1666206206964" duration="3836000" />
-      <workItem from="1666267580863" duration="6238000" />
+      <workItem from="1666267580863" duration="6304000" />
     </task>
     <task id="LOCAL-00001" summary="start creating a factory method">
       <created>1665680725392</created>
