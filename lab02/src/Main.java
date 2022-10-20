@@ -55,6 +55,4 @@ public class Main {
         System.out.printf("Sorting time %s%n", System.currentTimeMillis() - time);
         return arrayList;
     }
-
-
 }
