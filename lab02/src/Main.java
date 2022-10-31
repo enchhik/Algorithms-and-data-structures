@@ -52,7 +52,7 @@ public class Main {
         ArrayList<Integer> arrayList = new ArrayList<>(list);
         long time = System.currentTimeMillis();
         sorter.sort(arrayList);
-        System.out.printf("Sorting time %s%n", System.currentTimeMillis() - time);
+        System.out.printf("Sorting time %s\n", System.currentTimeMillis() - time);
         return arrayList;
     }
 }
