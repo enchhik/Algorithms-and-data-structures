@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc75ca83-af08-432b-87ed-0686759b34f7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Factorial.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Fibonacci.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/RecursionSumDigits.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/RecursionSumOfNum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab03/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab03/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +40,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false"
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Yana/Desktop/IdeaProjects/EPAM/test-quadratic-equation-master"
   }
 }]]></component>
   <component name="RunManager">
@@ -63,7 +63,9 @@
       <option name="presentableId" value="Default" />
       <updated>1667236584783</updated>
       <workItem from="1667236873961" duration="3169000" />
-      <workItem from="1667242299964" duration="5545000" />
+      <workItem from="1667242299964" duration="5688000" />
+      <workItem from="1667296589929" duration="1894000" />
+      <workItem from="1667375636317" duration="5458000" />
     </task>
     <servers />
   </component>

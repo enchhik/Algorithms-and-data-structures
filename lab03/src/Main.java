@@ -3,6 +3,11 @@ public class Main {
     public static void main(String[] args) {
         Factorial fact = new Factorial();
         Fibonacci fib = new Fibonacci();
+        RecursionSumDigits sumDigits = new RecursionSumDigits();
+        RecursionSumOfNum sumOfNum = new RecursionSumOfNum();
+
+        int n1 = 12;
+        int n2 = 5;
 
         int n = 4;
 
@@ -13,7 +18,6 @@ public class Main {
 
         assert a == b : "different values";
 
-        System.out.println(n);
         System.out.println(a);
         System.out.println(b);
 
@@ -26,8 +30,21 @@ public class Main {
 
         assert c == d : "different values";
 
-        System.out.println(n);
         System.out.println(c);
         System.out.println(d);
+
+        System.out.println();
+
+        int sd = sumDigits.execute(n);
+
+        System.out.println("sum of digits of number: " + n);
+        System.out.println(sd);
+
+        System.out.println();
+
+        int sn = sumOfNum.execute(n1, n2);
+
+        System.out.println(n1 + " + " + n2 + " = " + sn);
+
     }
 }
