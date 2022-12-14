@@ -1,19 +1,23 @@
+package org.example;
+
+import java.util.NoSuchElementException;
+
 public class BSTNode {
     private Node root;
 
-    private class Node
-    {
+    private class Node {
         private int key;            //key
         private String str;         //value
         private Node left, right;   //links to subtrees
         private int N;              //number of nodes in the subtree with this root
 
-        public Node (int key, String str, int N)
-        {
+        public Node(int key, String str, int N) {
             this.key = key;
             this.str = str;
             this.N = N;
         }
+
+    }
 
         public int size()
         {
@@ -37,6 +41,7 @@ public class BSTNode {
             //returns null if there is no key in the subtree rooted at x.
             if (x == null)
                 return null;
+
             if (key < x.key)
                 return get(x.left, key);
             else if (key > x.key)
@@ -57,6 +62,7 @@ public class BSTNode {
             //Otherwise, a new node is added to the subtree with the key "key" and the value str.
             if (x == null)
                 return new Node(key, str, 1);
+
             if (key < x.key)
                 x.left = put(x.left, key, str);
             else if (key > x.key)
@@ -75,6 +81,7 @@ public class BSTNode {
         private Node delete(Node x, int key) {
             if (x == null)
                 return null;
+
             if (key < x.key)
                 x.left = delete(x.left, key);
             else if (key > x.key)
@@ -94,10 +101,26 @@ public class BSTNode {
             return x;
         }
 
+        public int min() {
+            if (size() == 0) throw new NoSuchElementException("calls min() with empty symbol table");
+            return min(root).key;
+        }
+
         private Node min(Node x) {
             if (x.left == null) return x;
             return min(x.left);
         }
+
+        /*public int max() {
+            if (size() == 0) throw new NoSuchElementException("calls max() with empty symbol table");
+            return max(root).key;
+        }
+
+        private Node max(Node x) {
+            if (x.right == null) return x;
+            else return max(x.right);
+        }*/
+
         public void deleteMin()
         {
             root = deleteMin(root);
@@ -111,5 +134,20 @@ public class BSTNode {
             return x;
         }
 
+        public void treeTraversal()
+        {
+            treeTraversal(root);
+        }
+
+        private void treeTraversal(Node x)
+        {
+            if (x != null)
+            {
+                System.out.println(x.str + " ");
+                treeTraversal(x.left);
+                treeTraversal(x.right);
+            }
+        }
     }
-}
+
+
