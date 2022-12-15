@@ -11,7 +11,7 @@ public class BSTNodeTest {
         Map<Integer, String> bst;
 
         @BeforeEach
-        void TestInit() {
+        void Test1Init() {
             bst = new HashMap<>();
 
             bst.put(5, "Dnipro");
@@ -28,7 +28,6 @@ public class BSTNodeTest {
             bst.put(15, "Chernihiv");
             bst.put(10, "Lviv");
             bst.put(13, "Luhansk");
-            bst.put(25, "Filipchuk");
             bst.put(19, "Uzhhorod");
             bst.put(20, "Ternopil");
             bst.put(16, "Shevchenko");
@@ -38,20 +37,75 @@ public class BSTNodeTest {
         }
 
 
-        @Test
-        void TestTraversal() {
-            BSTNode bstNode = new BSTNode();
+    @Test
+    void Test2Traversal() {
+        BSTNode bstNode = new BSTNode();
 
-            for (Map.Entry<Integer, String> item: bst.entrySet()) {
-                bstNode.put(item.getKey(), item.getValue());
-            }
-
-            //bst.treeTraversal();
-            System.out.println();
-            Assertions.assertEquals(20, bst.size());
+        for (Map.Entry<Integer, String> item: bst.entrySet()) {
+            bstNode.put(item.getKey(), item.getValue());
         }
 
-
-
+        System.out.println();
+        Assertions.assertEquals(20, bst.size());
     }
+
+    @Test
+    void Test3() {
+        BSTNode bstNode = new BSTNode();
+
+        for (Map.Entry<Integer, String> item: bst.entrySet()) {
+            bstNode.put(item.getKey(), item.getValue());
+        }
+
+        System.out.println();
+        Assertions.assertEquals("Feodosiia",bstNode.get(24));
+        Assertions.assertEquals("Bila Tserkva",bstNode.get(17));
+        Assertions.assertNull(bstNode.get(30));
+        Assertions.assertNull(bstNode.get(41));
+    }
+
+
+    @Test
+    void Test4() {
+        BSTNode bstNode = new BSTNode();
+
+        for (Map.Entry<Integer, String> item: bst.entrySet()) {
+
+            bstNode.put(item.getKey(), item.getValue());
+
+            if(item.getKey()!=20)
+            {
+                bstNode.put(item.getKey(), item.getValue());
+            }
+        }
+
+        bstNode.put(20,"Novik");
+
+        System.out.println(bstNode.get(20));
+        Assertions.assertEquals("Novik", bstNode.get(20));
+        bstNode.put(20, "Mariupol");
+
+        bstNode.treeTraversal();
+        System.out.println();
+        Assertions.assertEquals(20, bstNode.size());
+
+        System.out.println();
+        Assertions.assertEquals("Mariupol", bstNode.get(20));
+    }
+
+    @Test
+    void Test5() {
+        BSTNode bstNode = new BSTNode();
+
+        for (Map.Entry<Integer, String> item: bst.entrySet()) {
+            bstNode.put(item.getKey(), item.getValue());
+        }
+
+        System.out.println();
+        bstNode.delete(16);
+
+        Assertions.assertEquals(19, bstNode.size());
+        Assertions.assertNull(bstNode.get(16));
+    }
+}
 
